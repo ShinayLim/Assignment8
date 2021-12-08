@@ -2,11 +2,10 @@ import random
 
 number = random.randint(0, 100)
 
-user_name = (input("Enter your name: "))
-user_name = user_name.strip()
+user_name = input("What is your name? ")
+user_name = user_name.title()
 
-print(f"Hello!" + user_name)
-print("Would you like to continue to the game?")
+print("""Hello! {}, Would you like to continue to the game?""".format(user_name))
 print("1.) Yes")
 print("2.) No")
 
@@ -29,3 +28,6 @@ if option ==1:
 
 elif option == 2:
     print("Thank you!")
+
+else:
+    print("Invalid option!")
