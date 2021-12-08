@@ -23,3 +23,15 @@ def main_game():
         print("Winner!")
     else:
         print("You loss.")
+        
+    print("Your numbers are: ", number1, number2, number3)
+    print("The lottery numbers are: ", lotto_number1, lotto_number2, lotto_number3)
+
+def again():
+    if input("Try again?(y/n) ") == 'y':
+        main_game()
+    else:
+        exit
+
+main_game()
+again()
