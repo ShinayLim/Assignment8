@@ -24,11 +24,8 @@ if option ==1:
     if guess < number:
         print("Guess lower than that number...")
 
-    while guess != number and tries < 3:
-        guess = input("Try again: ")
-        guess = int(guess)
+    if guess == number:
+        print("You won!")
 
-        if guess > number:
-            print("Guess greater than that number...")
-        if guess < number:
-            print("Guess lower than that number...")
+elif option == 2:
+    print("Thank you!")
