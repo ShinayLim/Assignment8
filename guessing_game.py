@@ -14,19 +14,21 @@ option = input("Select your option: ")
 option = int(option)
 
 if option ==1:
-    print("You have to guess the number that is between 0 to 100")
+    print("You have to guess the number that is between 0 to 100 correctly.")
 
-    guess = input("Guess a number [0-100]: ")
+    guess = input("Enter your guessed number [0-100]: ")
     guess = int(guess)
 
     if guess > number:
-        print("Guess less than that number...")
-    
-    if guess < number:
         print("Guess greater than that number...")
+    if guess < number:
+        print("Guess lower than that number...")
 
     while guess != number and tries < 3:
         guess = input("Try again: ")
         guess = int(guess)
 
         if guess > number:
+            print("Guess greater than that number...")
+        if guess < number:
+            print("Guess lower than that number...")
