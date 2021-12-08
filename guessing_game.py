@@ -1,7 +1,6 @@
 import random
 
 number = random.randint(0, 100)
-tries = 0
 
 user_name = (input("Enter your name: "))
 user_name = user_name.strip()
@@ -16,11 +15,9 @@ option = int(option)
 
 if option ==1:
     print("You have to guess the number that is between 0 to 100")
-    print("You only have three(3) tries")
 
     guess = input("Guess a number [0-100]: ")
     guess = int(guess)
-    tries += 1
 
     if guess > number:
         print("Guess less than that number...")
@@ -31,4 +28,5 @@ if option ==1:
     while guess != number and tries < 3:
         guess = input("Try again: ")
         guess = int(guess)
-        tries += 1
+
+        if guess > number:
